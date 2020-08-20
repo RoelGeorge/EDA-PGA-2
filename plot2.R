@@ -6,5 +6,5 @@ png(filename = "plot2.png")
 barplot( height = agrdata$Emissions ,
          names.arg = agrdata$year,
          xlab = "Years",ylab = "total PM2.5 emission",
-         main="total PM2.5 emission from Maryland for each of the years")
+         main="total PM2.5 emission from Baltimore City for each of the years")
 dev.off()
