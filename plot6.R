@@ -4,9 +4,7 @@ NEISCC <- merge(NEI, SCC, by="SCC")
 
 vehidata<- grepl("vehicle",NEISCC$SCC.Level.Two,ignore.case = T)
 reqdata<- NEISCC[vehidata,]
-
 reqdata1<- subset(reqdata, fips=="24510")
-
 reqdata2<- subset(reqdata, fips=="06037")
 agrdata1<- aggregate(Emissions~year, reqdata1, sum)
 agrdata2<- aggregate(Emissions~year, reqdata2, sum)
@@ -24,3 +22,4 @@ barplot( height = agrdata2$Emissions ,
          xlab = "Years",ylab = "total PM2.5 emission",
          main="total PM2.5 emission from motor vehicle sources in Los Angeles")
 dev.off()
+
